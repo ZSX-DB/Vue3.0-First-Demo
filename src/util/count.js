@@ -1,3 +1,6 @@
+/**
+ * 计时器功能
+ */
 import {ref, computed} from 'vue'
 
 export default function () {
