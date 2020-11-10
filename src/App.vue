@@ -17,6 +17,8 @@
         <router-link to="/directive">Directive</router-link>
         |
         <router-link to="/mixin">Mixin</router-link>
+        |
+        <router-link to="/teleport">Teleport</router-link>
     </div>
     <router-view/>
 </template>

@@ -49,6 +49,11 @@ const routes = [
         path: '/mixin',
         name: 'Mixin',
         component: () => import('../views/Mixin')
+    },
+    {
+        path: '/teleport',
+        name: 'Teleport',
+        component: () => import('../views/Telelport')
     }
 ]
 
