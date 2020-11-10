@@ -15,14 +15,19 @@
         },
         setup() {
             let showMsg = ref(false)
+            let msg = ref('自定义Message组件')
+
+            // 连续点击仍有bug
+            let timer
             const openMsg = () => {
+                clearTimeout(timer)
                 showMsg.value = true
                 // 设置setTimeout的时间稍微快于组件透明度为0的时间，避免闪烁
-                setTimeout(() => {
+                timer = setTimeout(() => {
                     showMsg.value = false
                 }, 3000)
             }
-            let msg = ref('自定义Message组件')
+
             return {
                 showMsg,
                 msg,
@@ -33,5 +38,4 @@
 </script>
 
 <style scoped>
-
 </style>
