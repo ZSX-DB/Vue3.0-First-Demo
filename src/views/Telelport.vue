@@ -17,9 +17,10 @@
             let showMsg = ref(false)
             const openMsg = () => {
                 showMsg.value = true
+                // 设置setTimeout的时间稍微快于组件透明度为0的时间，避免闪烁
                 setTimeout(() => {
                     showMsg.value = false
-                }, 3200)
+                }, 3000)
             }
             let msg = ref('自定义Message组件')
             return {
