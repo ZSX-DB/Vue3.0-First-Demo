@@ -1,10 +1,15 @@
-import { createApp } from 'vue'
+import {createApp} from 'vue'
 import App from './App.vue'
 import router from './router'
 // 指令
-import { clickOuter, focus, log, size } from './directive'
+import {clickOuter, focus, log, size} from './directive'
+// 组件
+import BackTop from './components/BackTop'
+
 
 const app = createApp(App)
+
+app.component('BackTop', BackTop)
 
 app.directive('focus', focus).directive('size', size)
     .directive('click-outer', clickOuter).directive('log', log)

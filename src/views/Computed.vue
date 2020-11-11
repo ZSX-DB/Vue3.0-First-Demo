@@ -39,6 +39,7 @@
         </label><br>
         fullName: {{ getFullName() }}
     </div>
+    <BackTop />
 </template>
 
 <script>
