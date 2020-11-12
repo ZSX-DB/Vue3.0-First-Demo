@@ -2,9 +2,9 @@ import {createApp} from 'vue'
 import App from './App.vue'
 import router from './router'
 // 指令
-import {clickOuter, focus, log, size} from './directive'
+import {clickOuter, focus, log, size} from '@Directive'
 // 组件
-import BackTop from './components/BackTop'
+import BackTop from '@Component/BackTop'
 
 
 const app = createApp(App)

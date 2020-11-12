@@ -5,7 +5,7 @@
 </template>
 
 <script>
-    import Message from '../components/Message'
+    import Message from '@Component/Message'
     import {ref} from 'vue'
 
     export default {
