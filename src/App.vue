@@ -19,6 +19,8 @@
         <router-link to="/mixin">Mixin</router-link>
         |
         <router-link to="/teleport">Teleport</router-link>
+        |
+        <router-link to="/dom">Dom</router-link>
     </nav>
     <router-view/>
 </template>

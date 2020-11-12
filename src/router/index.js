@@ -54,6 +54,11 @@ const routes = [
         path: '/teleport',
         name: 'Teleport',
         component: () => import('../views/Telelport')
+    },
+    {
+        path: '/dom',
+        name: 'Dom',
+        component: () => import('../views/Dom')
     }
 ]
 

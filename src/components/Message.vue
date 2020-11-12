@@ -1,6 +1,6 @@
 <template>
     <!--    将该dom挂载到#msg下，与#app同级-->
-    <teleport to="#msg">
+    <teleport to="#top">
         <div class="msg-box up-down-center" v-if="showMsg">
             {{ message }}
         </div>
@@ -27,7 +27,7 @@
     }
     // 如果需要定时清理节点，固定的父节点更好管理，当然，在vue中，使用v-if是更简单的做法
     // setTimeout(()=>{
-    //     document.querySelector('#msg').removeChild(document.querySelector('.msg-box'))
+    //     document.querySelector('#top').removeChild(document.querySelector('.msg-box'))
     // }, 3200)
 </script>
 
