@@ -1,6 +1,12 @@
 # first-demo
 
-## Project setup
+## 项目包含了vue3.0的路由设置及语法演示
+
+* 指令的封装和使用
+* 路由设置
+* vue.config.js的配置
+
+### Project setup
 ```
 npm install
 ```
@@ -24,8 +30,3 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ***
-
-### 项目包含了vue3.0的路由设置及语法演示
-
-* 指令的封装和使用
-* 路由设置
