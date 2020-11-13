@@ -15,6 +15,27 @@ module.exports = {
         // open当项目启动完成
         open: true,
         // proxy: 'http://localhost:8082/'
+        proxy: {
+            ///////////////////////////////////////
+            // 以'/api'为例
+            // ------------------------------------
+            // 不设置pathRewrite
+            // * 后端的api必须以/api开头
+            //   e.g. backend: app.get('/api/user') frontend: axios.get('/api/user')
+            // ------------------------------------
+            // 设置pathRewrite
+            // * 后端的api无需以/api开头，但前端仍然需要以/api开头
+            //   e.g. backend: app.get('/hot') frontend: axios.get('/api/hot')
+            ///////////////////////////////////////
+            '/api': {
+                target: 'http://localhost:8282',
+                // changeOrigin设置后才能跨域
+                changeOrigin: true,
+                pathRewrite: {
+                    '^/api': ''
+                }
+            }
+        }
     },
     // 可使用webpack配置
     configureWebpack: {
