@@ -8,9 +8,7 @@
 
 <script>
 
-    import axios from 'axios'
-
-    // @ is an alias to /src
+    import service from "../util/req";
     import HelloWorld from '@/components/HelloWorld.vue'
 
     export default {
@@ -19,15 +17,17 @@
             HelloWorld
         },
         setup() {
-            axios.get('/api/user').then(resp => {
+
+            service.get('/user').then(resp => {
                 console.log('user为', resp.data)
             })
-            axios.get('/api/hot').then(resp => {
+            service.get('/hot').then(resp => {
                 console.log('hot为', resp.data)
             })
-            axios.get('/api/hotter').then(resp => {
+            service.get('/hotter').then(resp => {
                 console.log('hotter为', resp.data)
             })
+
         }
     }
 </script>

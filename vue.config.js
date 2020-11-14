@@ -3,11 +3,10 @@ const path = require('path')
 // path.resolve添加子路径
 const resolve = dir => path.resolve(dir)
 
-
 module.exports = {
     // 打包出的文件名，默认为dist
     outputDir: 'dist',
-    publicPath: '/app',
+    // publicPath: '/app',
     // 支持所有 webpack-dev-server 的选项
     devServer: {
         // open当项目启动完成时打开浏览器
@@ -24,13 +23,13 @@ module.exports = {
             // * 后端的api无需以/api开头，但前端仍然需要以/api开头
             //   e.g. backend: app.get('/hot') frontend: axios.get('/api/hot')
             ///////////////////////////////////////
-            '/api': {
+            '/dev-api': {
                 target: 'http://localhost:8282',
                 ws: true,
                 // changeOrigin设置后才能跨域
                 changeOrigin: true,
                 pathRewrite: {
-                    '^/api': ''
+                    '^/dev-api': ''
                 }
             }
         }
@@ -42,6 +41,7 @@ module.exports = {
         resolve: {
             // 路径映射
             alias: {
+                // @ is an alias to /src
                 '@Component': resolve('src/components'),
                 '@Directive': resolve('src/directive'),
                 '@Util': resolve('src/util')
