@@ -59,6 +59,11 @@ const routes = [
         path: '/dom',
         name: 'Dom',
         component: () => import('../views/Dom')
+    },
+    {
+        path: '/env',
+        name: 'Env',
+        component: () => import('../views/Env')
     }
 ]
 

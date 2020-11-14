@@ -5,6 +5,7 @@
 * 指令的封装和使用
 * 路由设置
 * vue.config.js的配置
+* env文件的配置和使用
 
 ### Project setup
 ```
