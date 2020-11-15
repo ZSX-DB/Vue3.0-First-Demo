@@ -1,6 +1,7 @@
 /**
  * 优化项
- * 输入地址可以不以/api开头
+ * 输入地址可不以api前缀开头
+ * 添加验证手段
  */
 import axios from 'axios'
 
@@ -12,7 +13,11 @@ const service = axios.create({
 })
 
 service.interceptors.request.use(
-    config => config,
+    config => {
+        // 添加时间戳验证手段
+        config.headers.Timestamp = new Date().getTime()
+        return config
+    },
     error => {
         console.error('Request Error', error)
         return Promise.reject(error)
